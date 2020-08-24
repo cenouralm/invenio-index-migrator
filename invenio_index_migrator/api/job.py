@@ -10,16 +10,15 @@
 
 from __future__ import absolute_import, print_function
 
-import six
 from datetime import datetime
 
+import six
 from invenio_search.proxies import current_search, current_search_client
 from invenio_search.utils import build_alias_name, build_index_name, \
     prefix_index
 
 from ..indexer import SYNC_INDEXER_MQ_QUEUE, MigrationIndexer
-from ..utils import State, extract_doctype_from_mapping, \
-    get_queue_size
+from ..utils import State, extract_doctype_from_mapping, get_queue_size
 
 
 class Job(object):
